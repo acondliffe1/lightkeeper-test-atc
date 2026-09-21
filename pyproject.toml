@@ -1,0 +1,25 @@
+[project]
+name = "patchdiff"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "pandas>=3.0.6",
+    "pydantic>=2.13.5",
+    "rich>=15.0.0",
+    "typer>=0.27.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.16.8",
+]
+
+[project.scripts]
+patchdiff = "patchdiff.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
